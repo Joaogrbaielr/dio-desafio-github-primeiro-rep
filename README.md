@@ -1,1 +1,2 @@
-# dio-desafio-github-primeiro-rep
+# Repositorio do Desafio do curso do DIO
+Desafio
