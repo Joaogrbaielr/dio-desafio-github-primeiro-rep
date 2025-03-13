@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/login.css">
+    <title>Concessionária HoffStock</title>
+    <script src="js/login.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</head>
+  <body>
+    <div class="login">
+      <div class="bs header">
+        <ul>
+          <li><button>Login / </button></li>
+          <li><button>Cadastro</button></li>
+        </ul>
+      </div>
+
+      
+      <div class="header">
+        <h1>Login</h1>
+        <form action="">
+          <span>
+            <input type="email" name="email" id="email" autocomplete="on" required="">
+            <label for="email">Email</label>
+          </span>
+          <span>
+            <input type="pasword" name="senha" id="senha" autocomplete="off" required="">
+            <label for="senha">Senha</label>
+          </span>
+
+          <input type="submit" value="Entrar" class="b">
+          <div class="c">
+            Novo aqui? <a href="">criar conta</a>
+          </div>
+        </form>
+      </div>
+
+      <div class="cadastro">
+        <div class="header">
+          <h1>Criar conta</h1>
+          <form action="">
+  
+            <span>
+              <input type="nome" name="nome" id="nome" autocomplete="on" required="">
+              <label for="nome">Nome</label>
+            </span>
+            <span>
+              <input type="sobrenome" name="sobrenome" id="sobrenome" autocomplete="on" required="">
+              <label for="sobrenome">Sobrenome</label>
+            </span>
+            <span>
+              <input type="email" name="email" id="email" autocomplete="on" required="">
+              <label for="email">Email</label>
+            </span>
+            <span>
+              <input type="pasword" name="senha" id="senha" autocomplete="off" required="">
+              <label for="senha">Senha</label>  
+            </span>
+  
+            <input onclick="login(email, senha); login_vazio(email, senha); return false" type="submit" value="Criar conta" class="b">
+          </form>
+        </div>
+      </div>
+    </div>
+</body>
+</html>

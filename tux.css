@@ -1,0 +1,115 @@
+/* Basic reset */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden; /* Prevent scrolling */
+  background-color: #1a1a1a;
+  background-size: cover; /* Cover the entire screen */
+  background-position: center; /* Center the background */
+  color: #fff;
+  font-family: 'Arial', sans-serif;
+  text-align: center;
+}
+
+body {
+  background-image: 
+    url("https://images.unsplash.com/photo-1579952363878-3c031bb77288?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80"), /* Tux penguin */
+    url("https://images.pexels.com/photos/163872/race-cars-sport-competition-163872.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"), /* Race car */
+    linear-gradient(135deg, #1a1a1a, #b30808); /* Dark blue gradient */
+  background-size: 
+    200px, /* Tux penguin size */
+    cover, /* Race car size */
+    cover; /* Gradient size */
+  background-position: 
+    10% 10%, /* Tux penguin position */
+    center, /* Race car position */
+    center; /* Gradient position */
+  background-repeat: 
+    no-repeat, /* Tux penguin */
+    no-repeat, /* Race car */
+    no-repeat; /* Gradient */
+  background-blend-mode: overlay; /* Blend images and gradient */
+}
+
+/* Title styling */
+h1 {
+  font-size: 70px; /* BIIIIIIIIIIIIIIIIIIGGGGGGGGGGGGGEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEERRRRRRRRRRR */
+  margin-top: 20px;
+  margin-bottom: -150px;
+  color: #ffcc00; /* Party yellow */
+  text-shadow: 0 0 20px #ffcc00, 0 0 40px #ffcc00, 0 0 80px #ffcc00; /* Bigger glow */
+  z-index: 1000; /* On top of everything */
+}
+
+/* Image container */
+.image-container {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Full viewport height */
+}
+
+/* Spinning TuxMacqueens */
+.tuxmacqueen.spin {
+  position: absolute;
+  animation: spin 2s linear infinite;
+}
+
+/* Spin animation */
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Road styling */
+.road {
+  position: relative;
+  width: 100%;
+  height: 100px; /* Height of the road */
+  background: #333; /* Dark gray road */
+  top: 70%; /* Position the road near the bottom */
+  overflow: hidden;
+}
+
+/* Road lines */
+.road::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: repeating-linear-gradient(
+    to right,
+    #fff 0%,
+    #fff 10%,
+    transparent 10%,
+    transparent 20%
+  ); /* White dashed lines */
+  transform: translateY(-50%);
+}
+
+/* Driving TuxMacqueens */
+.tuxmacqueen.drive {
+  position: absolute;
+  width: 150px; /* Size of the car */
+  height: 100px;
+  background-image: url('https://i.imgur.com/3QZQZQZ.png'); /* TuxMacQueens image */
+  background-size: cover;
+  background-position: center;
+  animation: drive 5s linear infinite; /* Drive animation */
+}
+
+/* Drive animation */
+@keyframes drive {
+  0% {
+    left: -150px; /* Start off-screen */
+  }
+  100% {
+    left: 100%; /* Drive to the other side */
+  }
+}
